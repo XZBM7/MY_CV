@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CV | Ibrahim Amr</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -22,27 +24,56 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
+        .hidden-link {
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .hidden-link:hover {
+            color: #1e90ff;
+        }
+
         header {
-            text-align: center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             margin-bottom: 20px;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
         }
 
         header h1 {
             font-size: 32px;
-            margin-bottom: 5px;
+            margin: 0;
+            margin-right: 20px;
         }
 
         header p {
-            font-size: 14px;
-            margin-bottom: 2px;
+            font-style: italic;
+            margin: 0;
+            font-size: 20px;
+            color: #555;
         }
 
-        header a {
-            color: #1e90ff;
+
+        .header-right {
+            text-align: right;
+        }
+
+        .header-right p {
+            margin: 0;
+        }
+
+        .header-right a {
             text-decoration: none;
+            color: black;
         }
 
-        header a:hover {
+        .header-right a:hover {
             text-decoration: underline;
         }
 
@@ -81,7 +112,8 @@
             font-size: 16px;
         }
 
-        p, li {
+        p,
+        li {
             font-size: 14px;
             line-height: 1.5;
         }
@@ -94,46 +126,53 @@
         a:hover {
             text-decoration: underline;
         }
+
+        .icon {
+            color: black;
+            margin-right: 5px;
+        }
+
+        .expertise-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .expertise-list li {
+            font-size: 14px;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
-            <h1>Ibrahim Amr</h1>
-            <p>Software Engineer</p>
-            <p>Cairo, Egypt | <a href="mailto:ibrahim.amr775@gmail.com">ibrahim.amr775@gmail.com</a> | 01125700310</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/ibrahim-amr-b238bb316/">linkedin.com/in/ibrahim-amr</a></p>
+            <div class="header-left">
+                <h1>Ibrahim Amr</h1>
+                <p>Software Engineer</p>
+            </div>
         </header>
 
-        <section>
-            <h2>About Me</h2>
-            <p>Being a student, I gained some good information. I am very excited to acquire new skills and develop them in my job. I have strong experience in database SQL. I have previously worked in this field and dealt with data. My specialty, which I study in this field, is in a large way. Also, user interface development is keen and ready for any work in the interface field. User, front-end and database development. I am good at working with a team to meet what is asked of me. I have taken courses in WebDev (Front end) Python, PHP, SOLID Design Patterns , GitHub , database (SQL & DB administrator) and English. I have experience in teaching some courses such as Information Systems & Database. Developed several websites with a team.</p>
-        </section>
 
-        <section>
-            <h2>Experience</h2>
 
-            <div class="section-row">
-                <div>
-                    <h3>Instructor and Course Supervisor</h3>
-                    <ul>
-                        <li>Led a course covering UI/UX, software fundamentals, Agile methodologies, requirements, design patterns, SOLID principles, software testing, and SQL/MySQL.</li>
-                        <li>Developed curriculum and provided hands-on training to students.</li>
-                    </ul>
-                </div>
-                <p class="date">Jul 2024 - Sept 2024</p>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div style="flex: 1;">
+                <a href="mailto:ibrahim.amr755@gmail.com" class="hidden-link">
+                    <p style="margin: 0;"><i class="fas fa-envelope icon"></i> ibrahim.amr755@gmail.com</p>
+                </a>
+                <p style="margin: 0;"><i class="fas fa-map-marker-alt icon"></i> Cairo, Maadi</p>
             </div>
 
-            <div class="section-row">
-                <div>
-                    <h3>Teaching and Training</h3>
-                    <ul>
-                        <li>Acted as a lecturer for practical and theoretical courses in the Computer Science department.</li>
-                    </ul>
-                </div>
-                <p class="date">2023 - 2025</p>
+            <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                <p style="margin: 0; display: flex; align-items: center;"><i class="fas fa-phone icon"></i> 01125700310
+                </p>
+                <p style="margin: 0; display: flex; align-items: center;"><i class="fab fa-linkedin icon"></i>
+                    <a href="https://www.linkedin.com/in/ibrahim-amr-b238bb316/" class="hidden-link" target="_blank">
+                        https://www.linkedin.com/in/ibrahim-amr-b238bb316/
+                    </a>
+                </p>
             </div>
-        </section>
+        </div>
 
 
         <section>
@@ -144,11 +183,57 @@
             </div>
         </section>
 
+        <section>
+            <h2>Profile Info</h2>
+            <p>Being a student, I gained some good information. I am very excited to acquire new skills and develop them
+                in my job. I have strong experience in database SQL. I have previously worked in this field and dealt
+                with data. My specialty, which I study in this field, is in a large way. Also, user interface
+                development is keen and ready for any work in the interface field. User, front-end and database
+                development. I am good at working with a team to meet what is asked of me. I have taken courses in
+                WebDev (Front end) Python, PHP, SOLID Design Patterns , GitHub , database (SQL & DB administrator) and
+                English. I have experience in teaching some courses such as Information Systems & Database. Developed
+                several websites with a team.</p>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+
+            <div class="section-row">
+                <div>
+                    <h3>Instructor and Course Supervisor</h3>
+                    <ul>
+                        <li>Led a course covering UI/UX, software fundamentals, Agile methodologies, requirements,
+                            design patterns, SOLID principles, software testing, and SQL/MySQL.</li>
+                        <li>Developed curriculum and provided hands-on training to students.</li>
+                    </ul>
+                </div>
+                <p class="date">Jul 2024 - Sept 2024</p>
+            </div>
+
+            <div class="section-row">
+                <div>
+                    <h3>Teaching and Training</h3>
+                    <ul>
+                        <li>Acted as a lecturer for both practical and theoretical courses in the Computer Science
+                            department.</li>
+                        <li>Assisted students with solving complex problems and large-scale projects using various
+                            programming languages including Python and C.</li>
+                        <li>Provided in-depth instruction on database systems, both theoretical and practical, focusing
+                            on SQL and its applications.</li>
+                        <li>Delivered comprehensive lectures and practical sessions on Information Systems, covering all
+                            aspects including systems analysis, design, and implementation.</li>
+                        <li>Supported students in understanding and applying key concepts in software development,
+                            database management, and information systems through hands-on projects and exercises.</li>
+                    </ul>
+                </div>
+                <p class="date">2023 - Present</p>
+            </div>
+        </section>
 
         <section>
             <h2>Skills</h2>
-            <ul>
-                <li>Front-end Web Development (HTML , CSS , JS-React , Bootstrap)</li>
+            <ul class="expertise-list">
+                <li>Front-end Web Development (HTML, CSS, JS-React)</li>
                 <li>UI & UX Design</li>
                 <li>Software Testing</li>
                 <li>SOLID Principles</li>
@@ -164,7 +249,40 @@
             </ul>
         </section>
 
-        
+        <section>
+            <h2>Courses and Certifications</h2>
+            <ul class="expertise-list">
+                <li>Web Development (Front-end)</li>
+                <li>Testing Software</li>
+                <li>Web Design (UI & UX)</li>
+                <li>Python Programming</li>
+                <li>PHP Development</li>
+                <li>SOLID Design Patterns</li>
+                <li>GitHub Version Control</li>
+                <li>Database Management (SQL & DB Administration)</li>
+                <li>Mongodb</li>
+                <li>Design Patterns</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Areas of Expertise</h2>
+            <ul class="expertise-list">
+                <li>Testing Software</li>
+                <li>Front-end Web Development</li>
+                <li>Web Design (UI & UX)</li>
+                <li>Database SQL Server</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Languages</h2>
+            <ul class="expertise-list">
+                <li>Arabic: Native</li>
+                <li>English: Good</li>
+            </ul>
+        </section>
+
         <section>
             <h2>Projects</h2>
 
@@ -175,12 +293,14 @@
                         <li>Designed and developed a website for organizing gaming events and e-sports tournaments.</li>
                         <li>The platform allowed users to register for online tournaments and gaming events.</li>
                         <li>Managed project tasks using UML diagrams to plan the architecture and workflows.</li>
-                        <li>Utilized HTML, CSS, and JavaScript to build an interactive and responsive user interface.</li>
-                        <li>Ensured optimal performance and user experience, particularly for live event scheduling.</li>
+                        <li>Utilized HTML, CSS, and JavaScript to build an interactive and responsive user interface.
+                        </li>
+                        <li>Ensured optimal performance and user experience, particularly for live event scheduling.
+                        </li>
                         <li><a href="https://github.com/XZBM7/GAME_7">GitHub: Gaming Website</a></li>
                     </ul>
                 </div>
-                <p class="date">Jul 2024</p>
+                <p class="date">Jun 2024 - Aug 2024</p>
             </div>
 
             <div class="section-row">
@@ -193,20 +313,19 @@
                         <li><a href="https://github.com/XZBM7/Z-SHOP">GitHub: E-commerce Website</a></li>
                     </ul>
                 </div>
-                <p class="date">2023 - 2024</p>
+                <p class="date">Nov 2023 - Jan 2024</p>
             </div>
 
             <div class="section-row">
                 <div>
                     <h3>Social Media Website</h3>
                     <ul>
-                        <li>Designed a social media platform for sharing photos and videos, similar to Instagram.</li>
-                        <li>Led a team that divided tasks and followed a strict plan using UML diagrams.</li>
-                        <li>Built key UML diagrams such as Class diagrams and design structures.</li>
-                        <li>Developed the user interface using HTML, CSS, JS, and Bootstrap.</li>
+                        <li>Developed a social media platform allowing users to connect and share content.</li>
+                        <li>Implemented features including user profiles, posts, and messaging.</li>
+                        <li>Focused on a clean, user-friendly design using modern web technologies.</li>
                     </ul>
                 </div>
-                <p class="date">2023 - 2024</p>
+                <p class="date">Feb 2024 - May 2024</p>
             </div>
 
             <div class="section-row">
@@ -214,32 +333,19 @@
                     <h3>AI-based Game</h3>
                     <ul>
                         <li>Developed a 2D game using Python and Pygame where an AI character chases the player.</li>
-                        <li>The player collects points to win, and the game features a two-player mode where friends can compete.</li>
-                        <li>Integrated a settings menu allowing players to customize game difficulty and appearance.</li>
-                        <li>Implemented a database system using the JSON library to save and load player statistics and performance.</li>
+                        <li>The player collects points to win, and the game features a two-player mode where friends can
+                            compete.</li>
+                        <li>Integrated a settings menu allowing players to customize game difficulty and appearance.
+                        </li>
+                        <li>Implemented a database system using the JSON library to save and load player statistics and
+                            performance.</li>
                         <li><a href="https://github.com/XZBM7/python-game-pec-man">GitHub: AI Game</a></li>
                     </ul>
                 </div>
                 <p class="date">Aug 2024</p>
             </div>
         </section>
-
-        <section>
-            <h2>Languages</h2>
-            <ul>
-                <li>Arabic: Native</li>
-                <li>English: Good</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Contact Me</h2>
-            <p><strong>Email:</strong> <a href="mailto:ibrahim.amr775@gmail.com">ibrahim.amr775@gmail.com</a></p>
-            <p><strong>Phone:</strong> 01125700310</p>
-            <p><strong>Location:</strong> 36 Saleh Hijazi Street, Maadi, Cairo</p>
-
-        </section>
-
     </div>
 </body>
+
 </html>
